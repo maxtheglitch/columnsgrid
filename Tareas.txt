@@ -1,0 +1,2 @@
+-Faltaria hacer que las columnas bajen de a espacios de 8 y no de 16 como estan bajando ahora. También habría que subirle la velocidad al descenso de la columna y
+aún más a cuando se apreta hacia abajo. Lo de hacer que baje en espacio de a 8 tiene que configurarse modificando del grid.
