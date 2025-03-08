@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://byu5rk72bry7m"]
+
+[ext_resource type="Script" path="res://scenes/gem.gd" id="1_kh3sj"]
+[ext_resource type="Texture2D" uid="uid://bloeybhny4loy" path="res://Sprites/Columns_sprites/gems.png" id="2_8ihaj"]
+
+[node name="Gem" type="Node2D"]
+script = ExtResource("1_kh3sj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8ihaj")
+hframes = 7

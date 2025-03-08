@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpxilop5pf5vs"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_di5us"]
+[ext_resource type="Texture2D" uid="uid://d2mkcl10w6wqy" path="res://Sprites/BG/bg.png" id="2_8vyv0"]
+[ext_resource type="TileSet" uid="uid://dxfo3y7ah00cc" path="res://Gems.tres" id="2_kbise"]
+[ext_resource type="Script" path="res://grid.gd" id="3_fqafw"]
+[ext_resource type="Texture2D" uid="uid://7ftia6r8cpd6" path="res://Sprites/BG/BGcolor.png" id="5_myk1c"]
+
+[node name="Game" type="Node2D"]
+z_index = 1
+script = ExtResource("1_di5us")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(320, 240)
+offset_right = 320.0
+offset_bottom = 240.0
+scale = Vector2(1, 0.04)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(320, 240)
+offset_top = 232.0
+offset_right = 320.0
+offset_bottom = 472.0
+scale = Vector2(1, 0.04)
+color = Color(0, 0, 0, 1)
+
+[node name="Grid" type="TileMap" parent="."]
+tile_set = ExtResource("2_kbise")
+format = 2
+layer_0/y_sort_enabled = true
+script = ExtResource("3_fqafw")
+
+[node name="PieceSpawner" type="Node2D" parent="."]
+position = Vector2(24, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(160, 120)
+texture = ExtResource("2_8vyv0")
+
+[node name="BGcolor" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(160, 120)
+texture = ExtResource("5_myk1c")

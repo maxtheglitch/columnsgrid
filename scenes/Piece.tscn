@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhnc42yo28xve"]
+
+[ext_resource type="Script" path="res://scenes/piece.gd" id="1_7vkde"]
+[ext_resource type="Texture2D" uid="uid://bppmhrtw0jg6p" path="res://Sprites/Columns_sprites/clumns.png" id="2_pbehn"]
+[ext_resource type="PackedScene" uid="uid://byu5rk72bry7m" path="res://scenes/Gem.tscn" id="3_g87y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vne4r"]
+size = Vector2(16, 48)
+
+[node name="Piece" type="Node2D"]
+script = ExtResource("1_7vkde")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_pbehn")
+hframes = 7
+
+[node name="Gem1" parent="." instance=ExtResource("3_g87y7")]
+
+[node name="Gem2" parent="." instance=ExtResource("3_g87y7")]
+position = Vector2(0, -16)
+
+[node name="Gem3" parent="." instance=ExtResource("3_g87y7")]
+position = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_vne4r")

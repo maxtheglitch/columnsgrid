@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpxilop5pf5vs"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_di5us"]
+[ext_resource type="Texture2D" uid="uid://d2mkcl10w6wqy" path="res://Sprites/BG/bg.png" id="2_8vyv0"]
+[ext_resource type="TileSet" uid="uid://dxfo3y7ah00cc" path="res://Gems.tres" id="2_kbise"]
+[ext_resource type="Script" path="res://grid.gd" id="3_fqafw"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_di5us")
+
+[node name="Grid" type="TileMap" parent="."]
+tile_set = ExtResource("2_kbise")
+format = 2
+layer_0/y_sort_enabled = true
+script = ExtResource("3_fqafw")
+
+[node name="PieceSpawner" type="Node2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(160, 112)
+texture = ExtResource("2_8vyv0")
